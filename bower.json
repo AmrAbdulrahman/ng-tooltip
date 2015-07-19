@@ -1,0 +1,21 @@
+{
+  "name": "ng-tooltip",
+  "version": "0.0.0",
+  "authors": [
+    "Amr Abdulrahman <abu.muslim.amr@gmail.com>"
+  ],
+  "description": "Smart and Flexible Angular Tooltip",
+  "keywords": [
+    "Tooltip",
+    "Html",
+    "Flexible"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
