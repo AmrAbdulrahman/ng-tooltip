@@ -8,6 +8,9 @@ ng-tooltip is a felxible Angular tooltip with a lot of handy options.
 - borders
 - great set of flexibility options
 
+## Dependencies
+- Angular 1.x
+
 ## Installation
 - bower install ng-tooltip
 
