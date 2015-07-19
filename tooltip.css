@@ -1,11 +1,13 @@
 .smart-tooltip-wrapper {
   position: fixed;
-  min-width: 100px;
   min-height: 30px;
   color: #000;
   z-index: 1050;
   opacity: 0;
-  transition: opacity 0.5s ease;
+}
+
+.smart-tooltip-wrapper.animate {
+  transition: opacity 500ms ease;
 }
 
 .smart-tooltip-wrapper.open {

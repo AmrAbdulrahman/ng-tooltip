@@ -3,7 +3,8 @@
 angular.module('ng-tooltip', [])
 .directive("tooltip", function($templateCache, $timeout) {
     $templateCache.put('ng-tooltip-template.html',
-        ['<div ng-class="{open: visible}" class="smart-tooltip-wrapper" style="top: {{top}}px; left:{{left}}px;">',
+        ['<div ng-class="{animate: animate, open: visible}" class="smart-tooltip-wrapper"',
+            'style="top: {{top}}px; left:{{left}}px; -webkit-transition-duration: {{animateTime}}ms; transition-duration: {{animateTime}}ms;">',
             '<div class="content">',
                 '<div ng-transclude></div>',
                 '<div class="arrow" ng-class="{',
@@ -24,14 +25,18 @@ angular.module('ng-tooltip', [])
         link: function(scope, element, attrs) {
 
             function load() {
-                var on = attrs.on,
+                var on = attrs.on || 'hover',
                 handle = '#' + attrs.handle,
-                position = attrs.position;
+                position = attrs.position || 'bottom',
+                animate = attrs.animate || 'true',
+                animateTime = attrs.animateTime || 500;
 
                 scope.position = position;
                 scope.visible = false;
                 scope.top = 0;
                 scope.left = 0;
+                scope.animate = scope.$eval(animate);
+                scope.animateTime = animateTime;
 
                 function show() {
                     //  element/handle

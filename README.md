@@ -44,3 +44,11 @@ Examples:
   <p>bla bla bla</p>
 </tooltip>
 ````
+## Options
+| Option   | Description | values  | Default  |
+| -------- |:----------- |: -------| ---------|
+| handle | an id of the element (without '#')| | |
+| on | event that triggers the tooltip| hover/click | hover |
+| position | placement of the tooltip | top/bottom/right/left | bottom |
+| animate | animate popup or not | true/false | true |
+| animate-time | animation time in milliseconds | | 500ms
