@@ -47,10 +47,17 @@ Examples:
 
 ## Options
 
-Option       | Description                                      | values                | Default  
------------- | ------------------------------------------------ | --------------------- | ---------
-handle       | an id of the element (without '#')               |                       |          
-on           | event that triggers the tooltip| hover/click     | hover                 |          
-position     | placement of the tooltip                         | top/bottom/right/left | bottom   
-animate      | animate popup or not                             | true/false            | true     
-animate-time | animation time in milliseconds                   |                       | 500ms    
+Option            | Description                                          | Values                | Default  
+----------------- | ---------------------------------------------------- | --------------------- | ---------
+handle            | an id of the element (without '#')                   |                       |          
+on                | event that triggers the tooltip| hover/click         | hover                 |          
+position          | placement of the tooltip                             | top/bottom/right/left | bottom   
+animate           | animate popup or not                                 | true/false            | true     
+animate-time      | animation time in milliseconds                       |                       | 500ms    
+css-class         | css classes to use for dimentions, shadows, ...      | valid css class names |
+border-width      | border width                                         | width valid values    | 1px
+border-color      | border color                                         | color valid values    | black
+arrow             | show arrow or not                                    | true/false            | true
+arrow-size        | size in pixels                                       | valid px value        | 10
+arrow-top-offset  | distance in px or % from the top side of the tooltip |                       | 10px
+arrow-left-offset | distance in px or % from the left side of the tooltip|                       | 10px

@@ -14,17 +14,6 @@
   opacity: 1;
 }
 
-.smart-tooltip-wrapper .content {
-  margin: 0;
-  min-height: initial;
-  position: absolute;
-  padding: 5px;
-  z-index: -1;
-  background-color: #fff;
-  border: 1px solid;
-  border-radius: 4px;
-}
-
 .smart-tooltip-wrapper .arrow {
   width: 10px;
   height: 10px;
@@ -64,4 +53,16 @@
   left: -6px;
   border-bottom: 1px solid;
   border-left: 1px solid;
+}
+
+/* not nested in .smart-tooltip-wrapper for easy override */
+.tooltip-content {
+  margin: 0;
+  min-height: initial;
+  position: absolute;
+  padding: 5px;
+  z-index: -1;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
 }
