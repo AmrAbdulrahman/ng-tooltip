@@ -10,6 +10,7 @@
     "Html",
     "Flexible"
   ],
+  "main": "tooltip.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
