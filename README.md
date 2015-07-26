@@ -18,7 +18,7 @@ ng-tooltip is a felxible Angular tooltip with a lot of handy options.
 
 Reference JS and CSS files:
 ````html
-<script type="text/javascript" src="/bower_components/ng-tooltip/tooltip.js"></script>
+<script type="text/javascript" src="/bower_components/ng-tooltip/ng-tooltip.js"></script>
 <link rel="stylesheet" href="/bower_components/ng-tooltip/tooltip.css" />
 ````
 
@@ -61,3 +61,6 @@ arrow             | show arrow or not                                    | true/
 arrow-size        | size in pixels                                       | valid px value        | 10
 arrow-top-offset  | distance in px or % from the top side of the tooltip |                       | 10px
 arrow-left-offset | distance in px or % from the left side of the tooltip|                       | 10px
+
+## License
+MIT
