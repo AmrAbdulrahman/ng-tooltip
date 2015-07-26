@@ -1,0 +1,13 @@
+{
+    "undef": true,
+    "unused": true,
+    "globals": {
+        "angular": false,
+        "$": false
+    },
+    "camelcase": true,
+    "curly": true,
+    "indent": 2,
+    "quotmark": "single",
+    "strict": true
+}
