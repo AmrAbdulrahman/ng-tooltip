@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ng-tooltip demo</title>
+
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.17/angular.js"></script>
+    <script type="application/javascript" src="ng-tooltip.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" />
+    <link rel="stylesheet" href="ng-tooltip.css" />
+
+    <script>
+        angular.module('ngToolipDemo', ['ng-tooltip']);
+    </script>
+</head>
+
+
+<body ng-app="ngToolipDemo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>ng-tooltip demo</h1>
+            </div>
+        </div>
+
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>What</th>
+                    <th>Demo</th>
+                    <th>Hints</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Hover-->
+                <tr>
+                    <td>
+                        on:hover
+                    </td>
+                    <td class="text-center">
+                        <button id="btn-hover" class="btn btn-info">Hover Me!</button>
+                        <tooltip
+                                handle="btn-hover"
+                                on="hover"
+                                position="bottom">
+                            I popup on hover!
+                        </tooltip>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <!-- Click -->
+                <tr>
+                    <td>
+                        on:click
+                    </td>
+                    <td class="text-center">
+                        <button id="btn-click" class="btn btn-info">Click Me!</button>
+                        <tooltip
+                                handle="btn-click"
+                                on="click"
+                                position="bottom">
+                            I popup on click!
+                        </tooltip>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <!-- Positions -->
+                <tr>
+                    <td>
+                        Positions
+                    </td>
+                    <td class="text-center">
+                        <button id="btn-left" class="btn btn-info">Position:Left</button>
+                        <tooltip
+                                handle="btn-left"
+                                on="hover"
+                                position="left">
+                            Left
+                        </tooltip>
+
+                        <button id="btn-right" class="btn btn-info">Position:Right</button>
+                        <tooltip
+                                handle="btn-right"
+                                on="hover"
+                                position="right">
+                            Right
+                        </tooltip>
+
+
+                        <button id="btn-top" class="btn btn-info">Position:Top</button>
+                        <tooltip
+                                handle="btn-top"
+                                on="hover"
+                                position="top">
+                            Top
+                        </tooltip>
+
+
+                        <button id="btn-bottom" class="btn btn-info">Position:Bottom</button>
+                        <tooltip
+                                handle="btn-bottom"
+                                on="hover"
+                                position="bottom">
+                            Bottom
+                        </tooltip>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
