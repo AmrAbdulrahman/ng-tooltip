@@ -1,23 +1,22 @@
 'use strict';
 
 angular.module('ng-tooltip', [])
-    .directive('tooltip', function($templateCache, $timeout) {
-        $templateCache.put('ng-tooltip-template.html',
-            [
-                '<div ng-class="{animate: animate, open: visible}" class="smart-tooltip-wrapper"',
-                '   style="top: {{top}}px; left:{{left}}px; -webkit-transition-duration: {{animateTime}}ms; transition-duration: {{animateTime}}ms;">',
-                '   <div class="tooltip-content {{cssClass}}" style="border-color: {{borderColor}}; border-width: {{borderWidth}};">',
-                '       <div ng-transclude></div>',
-                '       <div ng-if="arrow" class="arrow" ng-class="{',
-                '           up: position === \'bottom\',',
-                '           down: position === \'top\',',
-                '           left: position === \'right\',',
-                '           right: position === \'left\'}"',
-                '           style="border-color: {{borderColor}}; border-width: {{borderWidth}}; ',
-                '           top: {{arrowTopOffset}}; left: {{arrowLeftOffset}}; width: {{arrowSize}}px; height: {{arrowSize}}px;',
-                '           top: {{arrowTop}}px;"></div>',
-                '       </div>',
-                '</div>'].join('')
+    .directive('tooltip', function ($templateCache, $timeout, $window) {
+        $templateCache.put('ng-tooltip-template.html', [
+            '<div ng-class="{animate: animate, open: visible}" class="smart-tooltip-wrapper"',
+            '   style="top: {{top}}px; left:{{left}}px; -webkit-transition-duration: {{animateTime}}ms; transition-duration: {{animateTime}}ms;">',
+            '   <div class="tooltip-content {{cssClass}}" style="border-color: {{borderColor}}; border-width: {{borderWidth}};">',
+            '       <div ng-transclude></div>',
+            '       <div ng-if="arrow" class="arrow" ng-class="{',
+            '           up: position === \'bottom\',',
+            '           down: position === \'top\',',
+            '           left: position === \'right\',',
+            '           right: position === \'left\'}"',
+            '           style="border-color: {{borderColor}}; border-width: {{borderWidth}}; ',
+            '           top: {{arrowTopOffset}}; left: {{arrowLeftOffset}}; width: {{arrowSize}}px; height: {{arrowSize}}px;',
+            '           top: {{arrowTop}}px;"></div>',
+            '       </div>',
+            '</div>'].join('')
         );
 
         return {
@@ -114,6 +113,9 @@ angular.module('ng-tooltip', [])
                             scope.left = eLeft - contentWidth - arrowSize;
                         }
 
+                        scope.top -= $(window).scrollTop();
+                        scope.left -= $(window).scrollLeft();
+
                         scope.$apply(function () {
                             scope.visible = true;
                         });
@@ -159,6 +161,13 @@ angular.module('ng-tooltip', [])
                     scope.$watch(function() {
                         return $(handle).offset().left;
                     }, function() {
+                        if(scope.visible === true) {
+                            $timeout(show, 0);
+                        }
+                    });
+
+                    // watch scroll
+                    angular.element($window).bind('scroll', function() {
                         if(scope.visible === true) {
                             $timeout(show, 0);
                         }
