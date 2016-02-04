@@ -10,7 +10,10 @@
     "Html",
     "Flexible"
   ],
-  "main": "tooltip.js",
+  "main": [
+    "ng-tooltip.js",
+    "ng-tooltip.css"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
