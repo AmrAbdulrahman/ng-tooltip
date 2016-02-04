@@ -52,6 +52,7 @@ Option            | Description                                          | Value
 handle            | an id of the element (without '#')                   |                       |          
 on                | event that triggers the tooltip| hover/click         | hover                 |          
 position          | placement of the tooltip                             | top/bottom/right/left | bottom   
+disabled          | ng-model that disable/enable popup                   | true/false            | false  
 animate           | animate popup or not                                 | true/false            | true     
 animate-time      | animation time in milliseconds                       |                       | 500ms    
 css-class         | css classes to use for dimentions, shadows, ...      | valid css class names |
