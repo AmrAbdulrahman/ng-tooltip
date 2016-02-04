@@ -78,7 +78,6 @@ angular.module('ng-tooltip', [])
                             widthStr = widthPXIndex !== -1 ? widthPX.substr(0, widthPXIndex) : widthPX,
                             width = parseInt(widthStr);
 
-
                         return {
                             height: height,
                             width: width
@@ -86,6 +85,12 @@ angular.module('ng-tooltip', [])
                     }
 
                     function show() {
+                        scope.disabled = scope.$parent.$eval(attrs.disabled || 'false');
+
+                        if(scope.disabled) {
+                            return;
+                        }
+
                         //  element/handle
                         var elem = $(handle),
                             elemSize = cssSize(elem),

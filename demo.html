@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Ng-tooltip demo</title>
+    <title>ng-tooltip demo</title>
 
     <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.17/angular.js"></script>
@@ -24,8 +24,6 @@
                 <h1>ng-tooltip demo</h1>
             </div>
         </div>
-
-
 
         <table class="table table-striped">
             <thead>
@@ -70,7 +68,6 @@
                     <td></td>
                 </tr>
 
-
                 <!-- Positions -->
                 <tr>
                     <td>
@@ -109,6 +106,29 @@
                                 on="hover"
                                 position="bottom">
                             Bottom
+                        </tooltip>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <!-- Disabled?-->
+                <tr>
+                    <td>
+                        disabled?
+                    </td>
+                    <td class="text-center">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="enabled"> Enable
+                            </label>
+                        </div>
+                        <button id="btn-disabled" class="btn btn-info">Hover Me!</button>
+                        <tooltip
+                                handle="btn-disabled"
+                                on="hover"
+                                position="bottom"
+                                disabled="!enabled">
+                            I popup only when enabled!
                         </tooltip>
                     </td>
                     <td></td>
