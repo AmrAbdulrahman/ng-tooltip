@@ -19,7 +19,7 @@ ng-tooltip is a felxible Angular tooltip with a lot of handy options.
 Reference JS and CSS files:
 ````html
 <script type="text/javascript" src="/bower_components/ng-tooltip/ng-tooltip.js"></script>
-<link rel="stylesheet" href="/bower_components/ng-tooltip/tooltip.css" />
+<link rel="stylesheet" href="/bower_components/ng-tooltip/ng-tooltip.css" />
 ````
 
 Include ng-tooltip as dependency:

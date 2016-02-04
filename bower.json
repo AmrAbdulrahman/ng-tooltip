@@ -10,7 +10,10 @@
     "Html",
     "Flexible"
   ],
-  "main": "tooltip.js",
+  "main": [
+    "ng-tooltip.js",
+    "ng-tooltip.css"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -20,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.x"
+    "angular": "~1.x",
+    "jquery": "~2.2.0"
   }
 }
